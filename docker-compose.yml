@@ -1,0 +1,45 @@
+# Para instalar no ZimaOS: App Store → "+" (Custom Install) → Import → cola este ficheiro.
+name: marmitas
+services:
+  marmitas:
+    image: ghcr.io/rabanete218/marmitas:latest
+    container_name: marmitas
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Lisbon
+    ports:
+      - target: 8080
+        published: "8787"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/marmitas/data
+        target: /data
+    x-casaos:
+      ports:
+        - container: "8080"
+          description:
+            en_us: Web UI
+      volumes:
+        - container: /data
+          description:
+            en_us: Base de dados (pratos, planos, sopa)
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: marmitas
+  author: rabanete218
+  developer: rabanete218
+  category: Utilities
+  icon: https://cdn.jsdelivr.net/gh/rabanete218/marmitas@main/public/icon.svg
+  index: /
+  port_map: "8787"
+  scheme: http
+  title:
+    en_us: Marmitas
+  tagline:
+    en_us: Planeador de refeições da semana de trabalho
+  description:
+    en_us: Sorteia os pratos da semana, regista se comeste o que estava planeado e quando fizeste e comeste sopa.

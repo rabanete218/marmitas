@@ -1,0 +1,10 @@
+{
+  "name": "Marmitas",
+  "short_name": "Marmitas",
+  "description": "Planeador de refeições da semana de trabalho",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf7f2",
+  "theme_color": "#c8553d",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

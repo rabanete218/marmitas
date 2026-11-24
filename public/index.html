@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Marmitas</title>
+  <meta name="theme-color" content="#c8553d">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main id="view" aria-live="polite"></main>
+
+  <nav class="tabbar" aria-label="Navegação">
+    <a href="#semana" data-tab="semana"><span aria-hidden="true">📅</span>Semana</a>
+    <a href="#pratos" data-tab="pratos"><span aria-hidden="true">🍽️</span>Pratos</a>
+    <a href="#sopa" data-tab="sopa" id="tab-sopa"><span aria-hidden="true">🥣</span>Sopa</a>
+    <a href="#historico" data-tab="historico"><span aria-hidden="true">📊</span>Histórico</a>
+    <a href="#definicoes" data-tab="definicoes"><span aria-hidden="true">⚙️</span>Definições</a>
+  </nav>
+
+  <dialog id="modal"><div id="modal-body"></div></dialog>
+  <div id="toast" role="status"></div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

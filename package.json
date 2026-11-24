@@ -1,0 +1,13 @@
+{
+  "name": "marmitas",
+  "version": "1.0.0",
+  "description": "Planeador de refeições para a semana de trabalho, com sorteio de pratos e registo de sopa. Feito para correr em casa (ZimaOS / Docker).",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "license": "MIT"
+}
